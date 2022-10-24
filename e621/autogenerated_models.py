@@ -381,15 +381,16 @@ class TagImplication(BaseModel):
     id: int
     reason: str
     creator_id: int
-    created_at: str
-    forum_post_id: int
+    created_at: Optional[str]
+    forum_post_id: Optional[int]
     antecedent_name: str
     consequent_name: str
     status: str
-    forum_topic_id: int
+    forum_topic_id: Optional[int]
     updated_at: Optional[str]
     descendant_names: List[str]
     approver_id: Optional[int]
+    
 
 
 class BulkUpdateRequest(BaseModel):
